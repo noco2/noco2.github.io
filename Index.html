@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<meta name= "viewport" content="width=device-width,
+	initial-scale=1.0">
+	<title>No Co2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script type="text/javascript" src="script/script.js"></script>
+</head>
+<body>
+	<!--upplägget av kontaktfältet-->
+	<div class="headLine"></div>
+	<header class="mainHeader">
+		<div class="leftHeader">
+			To contact us: <span id="numColor"><a href="tel:070-0960122">0700-960122</a></span>
+		</div>
+		<div class="rightHeader">
+			<ul id="icons">
+				<li><a href="https://fb.me/NoCo2Environment"><img src="imgs/facebook.png"></a></li>
+				<li><a href="https://www.instagram.com/noco2forenvironment"><img src="imgs/instagram.png"></a></li>
+				<li><a href="mailto:noco2environment@gmail.com"><img src="imgs/gmail.png"></a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<!--upplägget av menyfältet-->
+	<div class ="mainMenuContent" >
+		<div id="logo">
+			<img src="imgs/löv.png">
+		</div>
+		<nav class="menu">
+			<ul>
+				<li><a id="hem" href="#hem">Hem</a> |</li>
+				<li><a id="omKoldioxid" href="#sliderContent">Om koldioxidutsläpp</a> |</li>
+				<li><a id="kalkylator" href="#mainCalc">Koldioxidkalkylator</a> |</li>
+				<li><a id="kontakt" href="#footer">Kontakt</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!--allmänt om koldioxidutsläppen-->
+	<div class="sliderContent" id="sliderContent">
+		<h1>Vet du vad <span class="colorChanger">koldioxidutsläpp</span> kan leda till?</h1>
+		<div class="sliderText">
+			<h2 class="colorChanger"><strong>Allmänt om CO2:</strong></h2>
+			<br><br>
+			<p>
+				Den kemiska beteckningen för koldioxid är CO2 och är en lukt- och färglös gas som utgör 415 ppm av atmosfärens volym. Gasen ökar årligen med 2 ppm där mänskligheten spelar en stor roll i den ökningen.
+				Den globala koldioxidutsläppen orsakas till största delen av förbränning av fossila bränslen men även av
+				avskogning som bidrar till ökad halt i atmosfären.
+			</p>
+			<br><br>
+			<h2 class="colorChanger"><strong>Påverkan:</strong></h2>
+			<br><br>
+			<p>
+				Koldioxid bidrar mest till den förstärkta växthuseffekten vilken i sin tur orsakar ett förändrat klimat med
+				högre temperatur. Detta leder till flera konsekvenser bland annat att:<br><br>1. Isen smälter<br>2. Vattennivån stiger<br>3. Vädret blir våldsammare
+			</p>
+		</div>
+		<div class="slider"></div>
+	</div>
+	<hr>
+
+	<!--Kalkylatorn-->
+	<div class="mainCalc" id="mainCalc">
+		<div class="calcInfo">
+			<h1>Räkna ut dina koldioxidutsläpp</h1><br><br>
+			<p>
+				<section>
+					Med hjälp av vår koldioxidkalkylator kan du räkna ut hur mycket koldioxid olika aktiviteter släpper ut i atmosfären.
+				</section><br><br>
+				<section>
+					Fyll i de fält i vänsterkolumnen som du vill ta med i utsläppsberäkningen. Sedan tryck på beräkna för att se hur mycket CO2-utsläpp den aktiviteten eller mängden energi bidrar med.
+				</section><br><br>
+			</p>
+		</div>
+		<div class="calc">
+			<form>
+				<table>
+					<tr>
+						<td><input id="val1" name="val1" class="inputBox"  type="text"><span class="textBox"> kWh elenergi ger upphov till</span></td>
+						<td>
+							<input type="button" name="submit" value="Beräkna" class="btn" onclick="elenergi()">	 
+							<input id="answer" name="answer" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val2" class="inputBox" type="text"><span class="textBox">  kWh fjärrvärme ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="fjarrvarme()" value="Beräkna" class="btn"> 
+							<input id="answer2" class="inputBox" value="0" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val3" class="inputBox" type="text"><span class="textBox">  liter bensin ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="literBensin()" value="Beräkna" class="btn"> 
+							<input id="answer3" class="inputBox" value="0" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+			
+					<tr>
+						<td><input id="val4" class="inputBox" type="text"><span class="textBox">  liter diesel ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="literDiesel()" value="Beräkna" class="btn"> 
+							<input id="answer4" value="0" class="inputBox"><span> kg CO2</span></output>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val5" class="inputBox" type="text"><span class="textBox">  liter villaolja ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="villaolja()" value="Beräkna" class="btn"> 
+							<input id="answer5" value="0" class="inputBox"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val6" class="inputBox" type="text"><span class="textBox"> km med <select id="carSize">
+							<option value="liten">liten bil(ex. Audi A1)</option>
+							<option value="mellanstor">mellanstor (ex. Ford Kuga)</option>
+							<option value="stor">stor bil (ex. Volvo V90)</option>
+							<option value="stadsjeep">stadsjeep (ex.Jeep Grand Cherokee)</option>
+						</select> ger upphov till</span>
+					    </td>
+						<td>
+							<input type="button" onclick="literBilstorlek()" value="Beräkna" class="btn"> 
+							<input id="answer6" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val7" class="inputBox" type="text"><span class="textBox"> km i bil <select id="fuelConsumption">
+							<option value= "0.5" > 0.5 </option>
+							<option value="0.6">0.6</option>
+							<option value="0.7">0.7</option>
+							<option value="0.8">0.8</option>
+							<option value="0.9">0.9</option>
+							<option value="1.0">1.0</option>
+							<option value="1.1">1.1</option>
+							<option value="1.2">1.2</option>
+							<option value="1.3">1.3</option>
+							<option value="1.4">1.4</option>
+							<option value="1.5">1.5</option>
+						</select>l bensin/mil ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="literBensinförbrukning()" value="Beräkna" class="btn"> 
+							<input id="answer7" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val8" class="inputBox" type="text"><span class="textBox"> km i bil<select id="dieselConcumption">
+							<option value= "0.5" > 0.5 	</option>
+							<option value="0.6">0.6</option>
+							<option value="0.7">0.7</option>
+							<option value="0.8">0.8</option>
+							<option value="0.9">0.9</option>
+							<option value="1.0">1.0</option>
+							<option value="1.1">1.1</option>
+							<option value="1.2">1.2</option>
+							<option value="1.3">1.3</option>
+							<option value="1.4">1.4</option>
+							<option value="1.5">1.5</option>
+						</select> l diesel/mil ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="literDieselförbrukning()" value="Beräkna" class="btn"> 
+							<input id="answer8" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+			
+					<tr>
+						<td><input id="val9" class="inputBox" type="text"><span class="textBox"> km med buss ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="buss()" value="Beräkna" class="btn"> 
+							<input id="answer9" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><input id="val10" class="inputBox" type="text"><span class="textBox"> km i flyg ger upphov till</span></td>
+						<td>
+							<input type="button" onclick="flyg()" value="Beräkna" class="btn"> 
+							<input id="answer10" value="0" class="inputBox" type="text"><span> kg CO2</span>
+						</td>
+					</tr>
+			</table>
+			<br>
+			<p>
+				<input type="button" onclick="totalCo2()" value="Klicka här" class="btn"> för att beräkna det totala utsläppet samt kostnaden för att neutralisera den utsläppta mängden.
+			</p>
+			<br>
+			<span>Totalt utsläpp: </span>
+			<input id="answer11" type="text" class="inputBox"> kg CO2
+			<br><br>
+			<span>För att neutralisera den här mängden koldioxid kostar det</span>
+			<input id="answer12" type="text" class="inputBox" type="text"> kr
+		</form>
+		<br><br>
+		<p class="sources">
+			Kalkylatorn är baserad på allmänt vedertagna medelvärden.<br>
+			Källor: <a href="https://www.naturvardsverket.se">Naturvårdsverket </a>,
+					<a href="http://www.transportstyrelsen.se/">Transportstyrelsen </a>,
+					<a href="http://www.utslappsratt.se">Utsläppsrätt.se </a>,
+					<a href="https://www.scb.se">Statistikmyndigheten SCB</a>
+
+		</p>
+		<br>
+	</div>
+	<hr>
+
+	<!--extra innehåll (läs mer)-->
+	<div class="mainBackground">
+		<img src="imgs/water.jpg">
+		<div class="overlay">
+			<h2><a href="https://www.wwf.se/klimat/mansklig-paverkan/">Klicka här för att läsa mer om människans påverkan på klimatet</a></h2>
+		</div>
+	</div>
+	<hr>
+
+	<div class="footer" id="footer">
+		<div class="footerIcon" id="faceIcon"><a href="https://fb.me/NoCo2Environment"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="footerIcon" id="instaIcon"><a href="https://www.instagram.com/noco2forenvironment"><i class="fab fa-instagram"></i></a></div>
+		<div class="footerIcon" id="gmailIcon"><a href="mailto:noco2environment@gmail.com"><i class="fas fa-envelope"></i></a></div>
+	</div>
+	<hr>
+
+	<!--Tilltopp-pilen-->
+	<button id="arrowFixed"><i class="fas fa-arrow-alt-circle-up"></i></button>
+</body>
+</html>

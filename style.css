@@ -1,0 +1,315 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-style: italic;
+}
+body{
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+	color: #171915;
+}
+
+.text{
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+/*Designen av kontaktfältet*/
+
+.headLine{
+	background-color: #39b54a;
+	height: 6px;
+	width: 100%;
+}
+
+.mainHeader{
+	height: 45px;
+}
+.mainHeader .leftHeader{
+	margin: 10px 200px;
+	float: left;
+	line-height: 22.5px;
+	color: #8cc63f;
+	font-size: 92%;
+}
+
+#numColor{
+	color: black;
+}
+
+.mainHeader .rightHeader{
+	float: right;
+	margin: 5px 200px;
+}
+
+#icons img{
+	height: 30px;
+	width: 30px;
+	border-radius: 10px;
+}
+
+#icons{
+	list-style: none;
+}
+
+#icons li{
+	display: inline;
+	padding-left: 50px;
+}
+
+/* Designen av Menu-fältet */
+
+.mainMenuContent{
+	height: 135px;
+	background-color: #fff;
+	border-top: 1.5px solid #39b54a;
+	border-bottom: .5px solid #39b54a;
+}
+
+#logo{
+	height: 100%;
+	float: left;
+	width: 30%;
+	/*background-color: green;--------*/
+}
+
+#logo img{
+	height: 125px;
+	width: 250px;
+	margin: 5px 70px;
+}
+
+.menu{
+	float: right;
+	/*background-color: blue;......*/
+	width: 70%;
+	height: 100%;
+}
+
+.menu ul{
+	list-style: none;
+	margin: 30px 100px;
+}
+
+.menu ul li{
+	display: inline;
+	padding-left: 60px;
+	font-size: 20px;
+	line-height: 75px;
+}
+
+.menu ul li a:hover{
+	border-bottom: 4px solid #39b54a;
+	border-top: 4px solid #39b54a;
+	padding-bottom: 52px;
+	padding-top: 52px;
+}
+
+/*slide-visare*/
+.sliderContent{
+	margin-top: 20px;
+	height: 550px;
+}
+
+.sliderContent h1{
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 10px 370px;
+	font-style: italic;
+	font-family: times new roman;
+}
+
+.sliderText{
+	box-sizing: border-box;
+	padding: 10px 20px;
+	width: 40%;
+	height: 450px;
+	float: left;
+}
+.slider{
+	box-sizing: border-box;
+	margin-right: 60px;
+	margin-top: 5px;
+	width: 50%;
+	height: 450px;
+	float: right;
+	border-radius: 50px;
+	box-shadow: 2px 2px 2px 2px #39b54a;
+	background-size: cover;
+	background-image: url('imgs/noco2.jpg');
+	animation: slide 30s infinite;
+}
+
+@keyframes slide{
+	20%{
+		background-image: url('imgs/is.jpg');
+	}
+	40%{
+		background-image: url('imgs/co2.jpg');
+	}
+	60%{
+		background-image: url('imgs/aircraft.jpg');
+	}
+	80%{
+		background-image: url('imgs/train.jpg');
+	}
+	100%{
+		background-image: url('imgs/noco2.jpg');
+	}
+}
+
+.colorChanger{
+	color: #39b54a;
+}
+
+/*Kalkylatorn*/
+
+.mainCalc{
+	box-sizing: border-box;
+}
+
+.calcInfo{
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 30px; 
+}
+
+td{
+	padding-top: 10px;
+}
+
+.calcInfo h1{
+	color: #39b54a;
+}
+
+.calc{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.inputBox{
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 1px 1px 1px 1px #39b54a;
+}
+
+.textBox{
+	margin-right: 15px;
+}
+
+.btn{
+	color: white;
+	background-color: #39b54a;
+	border-radius: 5px;
+	width: 70px;
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+
+.sources{
+	font-size: 70%; 
+	font-family: times new roman;
+}
+
+.sources a{
+	text-decoration: underline;
+	color: blue;
+} 
+
+
+/*länkad badkgrund*/
+
+.mainBackground{
+	overflow: hidden;
+	height: 500px;
+	background-color: #39b54a;
+}
+
+.mainBackground img{
+	width: 100%;
+	height: 100%;
+	opacity: 0.50;
+}
+
+.overlay{
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	position: relative;
+	top: -300px;
+	border: 2px solid white;
+	margin: 0 auto;
+	height: 100px;
+	width: 30%;
+	text-align: center;
+}
+
+.overlay h2 a{
+	color: white;
+}
+
+/*tilltoppen-pil*/
+
+#arrowFixed{
+	padding-top: 2px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	font-size: 22px;
+	width: 50px;
+	height: 40px;
+	background: #39b54a;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	display: none;
+}
+
+/*footer*/
+.footer{
+	height: 70px;
+	width: 50%;
+	margin-left: 330px;
+}
+#faceIcon{
+	display: inline-block;
+}
+#faceIcon a:hover{
+	color: blue;
+	border-radius: 3px;
+}
+
+#instaIcon{
+	display: inline-block;
+}
+
+#instaIcon a:hover{
+	color: white;
+	background-image: url('imgs/instaback.jpg');
+	background-size: cover;
+	border-radius: 18px;
+}
+
+#gmailIcon{
+	display: inline-block;
+}
+#gmailIcon a:hover{
+	color: red;
+}
+
+.footerIcon{
+	padding-left: 140px;
+	font-size: 50px;
+	padding-top: 10px;
+}
+
+.footerIcon a{
+	color: #39b54a;
+}
